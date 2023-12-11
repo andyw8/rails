@@ -143,6 +143,7 @@ module Rails
             get "/rails/info/properties" => "rails/info#properties", internal: true
             get "/rails/info/routes"     => "rails/info#routes",     internal: true
             get "/rails/info"            => "rails/info#index",      internal: true
+            get "/rails/lsp/models/:name" => "rails/lsp#show", internal: true
           end
 
           routes_reloader.run_after_load_paths = -> do

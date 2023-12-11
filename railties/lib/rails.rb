@@ -32,6 +32,7 @@ module Rails
   autoload :HealthController
   autoload :Info
   autoload :InfoController
+  autoload :LspController
   autoload :MailersController
   autoload :WelcomeController
 

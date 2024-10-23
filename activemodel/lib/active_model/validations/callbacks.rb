@@ -22,8 +22,8 @@ module ActiveModel
     module Callbacks
       extend ActiveSupport::Concern
 
+      include ActiveSupport::Callbacks
       included do
-        include ActiveSupport::Callbacks
         define_callbacks :validation,
                          skip_after_callbacks_if_terminated: true,
                          scope: [:kind, :name]

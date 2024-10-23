@@ -10,15 +10,15 @@ module ActiveRecord
 
     included do
       initialize_generated_modules
-      include Read
-      include Write
-      include BeforeTypeCast
-      include Query
-      include PrimaryKey
-      include TimeZoneConversion
-      include Dirty
-      include Serialization
     end
+    include Read
+    include Write
+    include BeforeTypeCast
+    include Query
+    include PrimaryKey
+    include TimeZoneConversion
+    include Dirty
+    include Serialization
 
     RESTRICTED_CLASS_METHODS = %w(private public protected allocate new name superclass)
 

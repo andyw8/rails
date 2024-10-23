@@ -4,8 +4,8 @@ module ActionMailer
   module Callbacks
     extend ActiveSupport::Concern
 
+    include ActiveSupport::Callbacks
     included do
-      include ActiveSupport::Callbacks
       define_callbacks :deliver, skip_after_callbacks_if_terminated: true
     end
 

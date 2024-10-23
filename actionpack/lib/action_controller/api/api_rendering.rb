@@ -6,9 +6,7 @@ module ActionController
   module ApiRendering
     extend ActiveSupport::Concern
 
-    included do
-      include Rendering
-    end
+    include Rendering
 
     def render_to_body(options = {})
       _process_options(options)

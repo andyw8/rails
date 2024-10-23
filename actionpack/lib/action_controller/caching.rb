@@ -29,9 +29,7 @@ module ActionController
   module Caching
     extend ActiveSupport::Concern
 
-    included do
-      include AbstractController::Caching
-    end
+    include AbstractController::Caching
 
     private
       def instrument_payload(key)

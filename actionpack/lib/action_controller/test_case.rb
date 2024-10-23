@@ -585,9 +585,9 @@ module ActionController
         klass.create
       end
 
+      include ActionController::TemplateAssertions
+      include ActionDispatch::Assertions
       included do
-        include ActionController::TemplateAssertions
-        include ActionDispatch::Assertions
         class_attribute :_controller_class
         setup :setup_controller_request_and_response
         ActiveSupport.run_load_hooks(:action_controller_test_case, self)

@@ -37,14 +37,14 @@ module ActiveModel
   module Validations
     extend ActiveSupport::Concern
 
+    extend ActiveModel::Naming
+    extend ActiveModel::Callbacks
+    extend ActiveModel::Translation
+
+    extend  HelperMethods
+    include HelperMethods
+
     included do
-      extend ActiveModel::Naming
-      extend ActiveModel::Callbacks
-      extend ActiveModel::Translation
-
-      extend  HelperMethods
-      include HelperMethods
-
       define_callbacks :validate, scope: :name
 
       class_attribute :_validators, instance_writer: false, default: Hash.new { |h, k| h[k] = [] }

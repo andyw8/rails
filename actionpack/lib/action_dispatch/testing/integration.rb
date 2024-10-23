@@ -664,10 +664,10 @@ module ActionDispatch
       include ActionController::TemplateAssertions
       include TestHelpers::PageDumpHelper
 
+      include ActionDispatch::Routing::UrlFor
+      include UrlOptions # don't let UrlFor override the url_options method
+      include ActionDispatch::Assertions::RoutingAssertions::WithIntegrationRouting
       included do
-        include ActionDispatch::Routing::UrlFor
-        include UrlOptions # don't let UrlFor override the url_options method
-        include ActionDispatch::Assertions::RoutingAssertions::WithIntegrationRouting
         ActiveSupport.run_load_hooks(:action_dispatch_integration_test, self)
         @@app = nil
       end

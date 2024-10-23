@@ -10,8 +10,8 @@ module ActiveSupport
 
     included do
       cattr_accessor :silencer, default: true
-      include ActiveSupport::LoggerThreadSafeLevel
     end
+    include ActiveSupport::LoggerThreadSafeLevel
 
     # Silences the logger for the duration of the block.
     def silence(severity = Logger::ERROR)

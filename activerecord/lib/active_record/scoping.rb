@@ -6,10 +6,8 @@ module ActiveRecord
   module Scoping
     extend ActiveSupport::Concern
 
-    included do
-      include Default
-      include Named
-    end
+    include Default
+    include Named
 
     module ClassMethods # :nodoc:
       # Collects attributes from scopes that should be applied when creating

@@ -8,9 +8,9 @@ module AbstractController
   module Logger # :nodoc:
     extend ActiveSupport::Concern
 
+    include ActiveSupport::Benchmarkable
     included do
       config_accessor :logger
-      include ActiveSupport::Benchmarkable
     end
   end
 end

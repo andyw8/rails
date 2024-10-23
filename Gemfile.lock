@@ -297,8 +297,6 @@ GEM
       googleauth (>= 0.16.2, < 2.a)
       mini_mime (~> 1.0)
     google-protobuf (3.25.1)
-    google-protobuf (3.25.1-x86_64-darwin)
-    google-protobuf (3.25.1-x86_64-linux)
     googleauth (1.9.1)
       faraday (>= 1.0, < 3.a)
       google-cloud-env (~> 2.1)

@@ -409,9 +409,8 @@ module ActiveRecord
       # ActiveRecord::Callbacks for more information.
     end
 
+    include ActiveModel::Validations::Callbacks
     included do
-      include ActiveModel::Validations::Callbacks
-
       define_model_callbacks :initialize, :find, :touch, only: :after
       define_model_callbacks :save, :create, :update, :destroy
     end

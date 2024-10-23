@@ -54,7 +54,7 @@ group :rubocop do
   gem "rubocop-minitest", require: false
   gem "rubocop-packaging", require: false
   gem "rubocop-performance", require: false
-  gem "rubocop-rails", require: false
+  gem "rubocop-rails", require: false, github: "andyw8/rubocop-rails", branch: "andyw8/add-concern-misuse-cop"
   gem "rubocop-md", require: false
 
   # This gem is used in Railties tests so it must be a development dependency.

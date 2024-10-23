@@ -1,4 +1,15 @@
 GIT
+  remote: https://github.com/andyw8/rubocop-rails.git
+  revision: 8d2e767798868b6ecde943c82bb930c10e4b6e02
+  branch: andyw8/add-concern-misuse-cop
+  specs:
+    rubocop-rails (2.26.2)
+      activesupport (>= 4.2.0)
+      rack (>= 1.1)
+      rubocop (>= 1.52.0, < 2.0)
+      rubocop-ast (>= 1.31.1, < 2.0)
+
+GIT
   remote: https://github.com/matthewd/websocket-client-simple.git
   revision: e161305f1a466b9398d86df3b1731b03362da91b
   branch: close-race
@@ -286,6 +297,8 @@ GEM
       googleauth (>= 0.16.2, < 2.a)
       mini_mime (~> 1.0)
     google-protobuf (3.25.1)
+    google-protobuf (3.25.1-x86_64-darwin)
+    google-protobuf (3.25.1-x86_64-linux)
     googleauth (1.9.1)
       faraday (>= 1.0, < 3.a)
       google-cloud-env (~> 2.1)
@@ -500,11 +513,6 @@ GEM
     rubocop-performance (1.20.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.30.0, < 2.0)
-    rubocop-rails (2.23.1)
-      activesupport (>= 4.2.0)
-      rack (>= 1.1)
-      rubocop (>= 1.33.0, < 2.0)
-      rubocop-ast (>= 1.30.0, < 2.0)
     rubocop-rails-omakase (1.0.0)
       rubocop
       rubocop-minitest
@@ -706,7 +714,7 @@ DEPENDENCIES
   rubocop-minitest
   rubocop-packaging
   rubocop-performance
-  rubocop-rails
+  rubocop-rails!
   rubocop-rails-omakase
   rubyzip (~> 2.0)
   sdoc!
